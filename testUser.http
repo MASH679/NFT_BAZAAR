@@ -1,0 +1,87 @@
+####### user Signup
+
+POST http://localhost:8080/user/signup
+Content-Type: application/json
+
+{
+    "password":"Qway1234",
+    "email":"mash5@gmail.com",
+    "fullName":"shantu",
+     "phoneNo":"03009380873",
+     "address":"Ali Street"
+
+}
+
+####### user Login
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+   "password":"_Qway1234",
+    "email":"mash3@gmail.com"
+
+}
+
+####### user NFT
+
+POST http://localhost:8080/user/create-nft
+Content-Type: application/json
+
+{
+   "name":"sdd", 
+   "description": "VERY short",
+    "price":"302S2",
+    "sellerEmail":"mash4@gmail.com"
+
+}
+
+
+#######  NFT Subcription
+
+POST http://localhost:8080/user/Buy_Subcription
+Content-Type: application/json
+
+{
+   "sellerEmail":"mash5@gmail.com",
+   "Reference_no":"003004243232"
+
+}
+
+####### Subscription status checking
+
+GET http://localhost:8080/Admin/get_Subs
+
+
+#######  Confirm_subs
+
+PATCH http://localhost:8080/Admin/confirm_Subs   
+Content-Type: application/json
+
+{
+    "Id":"659a7e8346f602d47304e153"
+    
+}
+
+#######  Order_Creation
+
+POST http://localhost:8080/user/order 
+Content-Type: application/json
+
+{
+    "Buyer_Email" : "mash@gmail.com" ,
+    "Transection_id": "123456" ,
+    "payment_Info":"Sadapay",
+    "nft_Id": "658dcbbf403a6d252c3c828f"
+}
+
+#######  Pending_NFTS
+
+GET  http://localhost:8080/NFT/get_nft
+
+
+#######  Revenue
+
+GET  http://localhost:8080/admin/calculate-revenue-profit
+
+
